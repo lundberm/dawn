@@ -107,7 +107,7 @@ jobs:
         -DDAWN_BUILD_NODE_BINDINGS=1
 
     - name: Build
-      run: cmake --build out/${{ matrix.build_type }} --config ${{ matrix.build_type }}
+      run: cmake --build out/${{ matrix.build_type }} --config ${{ matrix.build_type }} --target dawn_node
 
     - name: Package
       run: |
